@@ -18818,7 +18818,7 @@ section {
 }
 
 .pricing-box:hover {
-  background: #1998ff;
+  background: #5a3e64 !important;
 }
 
 .pricing-box:hover .title-text {

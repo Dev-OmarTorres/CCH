@@ -1,977 +1,654 @@
+<?php
+    session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<!-- Required meta tags --> 
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-		<title>Centro Certificador de Líderes</title>
-		<link rel="stylesheet" href="vendors/mdi/css/materialdesignicons.min.css">
-		<link rel="stylesheet" href="vendors/owl.carousel/css/owl.carousel.css">
-		<link rel="stylesheet" href="vendors/owl.carousel/css/owl.theme.default.min.css">
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-		<link rel="stylesheet" href="vendors/aos/css/aos.css">
-		<link rel="stylesheet" href="vendors/jquery-flipster/css/jquery.flipster.css">
-		<link rel="stylesheet" href="css/style.css">
-	</head>
-	<body data-spy="scroll" data-target=".navbar" data-offset="50">
-		<style>
-			.navbar{
-				padding: 0px !important;
-			}
-			
-		</style>
-	<div id="mobile-menu-overlay"></div>
-		<nav class="navbar navbar-expand-lg fixed-top">
-			<div class="container">
-				<a class="navbar-brand" href="#"><img src="images/Logo.png" style="width:110px !important" alt="CCH"></a>
-				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
-				<span class="navbar-toggler-icon"><i class="mdi mdi-menu"> </i></span>
-				</button>
-				<div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-					<div class="d-lg-none d-flex justify-content-between px-4 py-3 align-items-center">
-						<img src="images/Logo.png" class="logo-mobile-menu" alt="logo">
-						<a href="javascript:;" class="close-menu"><i class="mdi mdi-close"></i></a>
-					</div>
-					<ul class="navbar-nav ml-auto align-items-center">
-						<li class="nav-item active">
-							<a class="nav-link" href="#home">Inicio <span class="sr-only">(current)</span></a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="#about">¿Quién Somos?</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="#services">Servicios</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="#testimonial">Graduados</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="#cedes">Alianzas</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="#projects">Eventos</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="#plans">Modalidades</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="#Noticias">Sitio Informativo</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="#Cedes2">Sedes</a>
-						</li>
-						
-						<!--
-						<li class="nav-item">
-							<a class="nav-link" href="#contact">Informes</a>
-						</li>
-						-->
-						<li class="nav-item">
-							<a class="nav-link btn btn-success" style="background: #5a6543 !important; border-color: white !important;" href="mailto:someone@yoursite.com">Informes</a>
-						</li>
-						
-					</ul>
-				</div>
-			</div>
-		</nav>
 
-	<div class="content" id="home">
-          <div class="site-banner__vid">
-              <div class="overlay-bg"></div>
-              <video muted="" autoplay="" loop="" preload="" playsinline="" data-video="0">
-                   <source src="video/Intro CCH.m4v" type="video/mp4">
-				</video>
-			</div>
-          </div>
-<style>
+<head>
+    <meta charset="utf-8">
+    <title>CCL</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
 
-.navbar {
-  /*background-color: transparent !important;*/
-}
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
 
-::-webkit-scrollbar-track {
-    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-    border-radius: 10px;
-    background-color: #F5F5F5;
-    display:none;
-    
-}
-::-webkit-scrollbar {
-    width: 6px;
-    background-color: #F5F5F5;
-    display:none;
-    
-}
-::-webkit-scrollbar-thumb {
-    border-radius: 10px;
-    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
-    background-color: #b50201;
-    display:none;
-    
-}
-/*MAIN SECTION===============================================*/
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500&family=Jost:wght@500;600;700&display=swap" rel="stylesheet"> 
 
-.main-wrap{
-    position: relative;
-    width:100%;
-    height:auto;
-}
-body.animation .main-wrap {
-    position: fixed;   
-}
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
 
-body.animation .home-wrap {    
-    padding-top: 550px;
-    display: block;
-}
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container-xxl bg-white p-0" >
+        <!-- Spinner Start -->
+        <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+            <div class="spinner-grow text-primary" style="width: 3rem; height: 3rem;" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+        </div>
+        <!-- Spinner End -->
 
 
-.site-banner__vid video {
-    width: 100%;
-    height: 100%;
-    display: block;
-    margin-left: auto;
-    object-fit: cover;
-    /* position: absolute; */
-    left: 0;
-    top: 0;
-    margin: 0 auto;
-}
-
-
-
-</style>
-	
-
-		
-		<div class="page-body-wrapper">
-			<section class="our-process" id="about">
-				<div class="container" style="color:black !important;">
-					<div class="row">
-						<div class="col-sm-6" data-aos="fade-up">
-							<h5 class="text-dark">Centro Certificador de Líderes</h5>
-							<!--
-							<h3 class="font-weight-medium text-dark">Descubrimos nuevas ideas para ti!</h3>
-							<h5 class="text-dark mb-3">Puedes imaginar cualquier cosa.</h5>
-							<p class="font-weight-medium mb-4">Descripción
-							</p>
-							-->
-							<div class="justify-content-start mb-3">
-								<p class="mb-0">¿QUIÉNES SOMOS?</p>
-								<p class="mb-4 text-justify">Somos un centro de evaluación y certificación de coaching, con una metodología avalada por la Secretaria de Educación Pública (SEP), a través del Consejo Nacional de Normalización y Certificación de Competencias Laborales (CONOCER); que ofrece al empresario, trabajadores, docentes, estudiantes y servidores públicos un alto nivel de competencias para trabajar en el logro de sus objetivos.</p>
-							</div>
-							<div class="justify-content-start mb-3">
-								<p class="mb-0">MISIÓN</p>
-								<p class="mb-4 text-justify">Brindamos acompañamiento en el crecimiento, alineación y equilibrio en todas las areas de las personas bajo una metodología de reconocimiento mundial. Contribuimos al desarrollo personal y profesional en acciones de mejoras a través del coaching, logrando despertar todas las cualidades dormidas y encaminarlas al logro de objetivos.</p>
-							</div>
-							<div class="justify-content-start">
-								<p class="mb-0">VISIÓN</p>
-								<p class="mb-4 text-justify">Ser un centro de evaluación y certificación de coaching de talla mundial, que logre contribuir en el ser humano un alto nivel de excelencia, con altos estándares de calidad, y profesionalismo. </p>
-							</div>
-							<div class="justify-content-start">
-								<p class="mb-0">VALORES CORPORATIVOS</p>
-								<p class="mb-4 text-justify">El centro certificador cuenta con los siguientes valores corporativos donde el cliente es lo más importante.</p>
-								<ul class="text-justify">
-									<li>Valores éticos, el mundo está urgido de retomar e incorporar los valores en la vida del ser humano.</li>
-									<li>Confidencialidad, el secreto profesional es lo más importante para nosotros.</li>
-									<li>Integridad y coherencia; aplicamos lo que decimos.</li>
-									<li>Honestidad, el cliente necesita de un acompañamiento responsable, con profesionales que puedan garantizar un excelente trabajo.</li>
-									<li>Orientación y acompañamiento al logro de objetivos.</li>
-									<li>Calidad en el servicio, nos esforzamos por brindarle a nuestros clientes la mejor calidad, con los mejores profesionales.</li>
-								</ul>
-							</div>
-						</div>
-						<div class="col-sm-6 text-right" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000">
-							<img src="images/Altus.png" class="img-fluid">
-						</div>
-					</div>
-				</div>
-			</section>
-
-			<section class="our-services" id="services">
-				<div class="container">
-					<div class="row">
-						<div class="col-sm-12">
-							<h5 class="text-dark">Nuestros Servicios</h5>
-							<p class="text-dark mb-5 text-justify">El servicio del coaching busca desarrollar el potencial productivo del empresario, trabajadores, docentes, estudiantes y servidores públicos, en pro de hablar un lenguaje en común, certificando los conocimientos, habilidades, destrezas y actitudes del mismo, logrando que el coach obtenga reconocimiento oficial.</p>
-						</div>
-					</div>
-					<div class="row" data-aos="fade-up">
-						<div class="col-lg-4 col-sm-12 text-center text-dark">
-							<div class="services-box" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">
-								<i class="fa-solid fa-arrow-trend-up fa-3x" style="color:#542e6d"></i>
-								<h6 class="text-dark mb-3 mt-4 font-weight-medium">CERTIFICACIONES
-								</h6>
-								<p>
-									<ul class="text-justify">
-										<li>EC0 724 Coaching para la ejecución </li>
-										<li>EC0 366 Diseño de cursos en línea </li>
-										<li>EC0 217 Impartición de cursos del capital humano</li>
-										<li>EC0 306 Reclutamiento y selección del Talento humano</li>
-									</ul>
-								</p>
-							</div>
-						</div>
-						<div class="col-lg-4 col-sm-12 text-center text-dark">
-							<div class="services-box"   data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">
-								<i class="fa-solid fa-user-tie fa-3x" style="color:#542e6d"></i>
-								<h6 class="text-dark mb-3 mt-4 font-weight-medium">ESPECIALIZACIONES
-								</h6>
-								<p>
-									<ul class="text-justify">
-										<li>Coaching en el Liderazgo</li>
-										<li>Coaching Inteligencia espiritual: Un enfoque para despertar la conciencia</li>
-										<li>Coaching para el desempeño de equipos</li>
-										<li>EC1261 Coaching de Finanzas Personales</li>
-										<li>EC1186 Coaching para el cambio de hábitos</li>
-										<li>EC0724 Coaching para la ejecución</li>
-										<li>EC0234 Facilitación de sesiones de Coaching transformacional</li>
-										<li>EC0204 Ejecución de Sesiones de Coaching</li>
-									</ul>
-								</p>
-							</div>
-						</div>
-						<div class="col-lg-4 col-sm-12 text-center text-dark">
-							<div class="services-box" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">
-								<i class="fa-solid fa-people-group fa-3x" style="color:#542e6d"></i>
-								<h6 class="text-dark mb-3 mt-4 font-weight-medium">COACHING
-								</h6>
-								<p>
-									<ul class="text-justify">
-										<li>Formación</li>
-										<li>Capacitación  </li>
-										<li>Certificación</li>
-										<li>Sesiones de Coaching</li>
-										<li>Casa club del coach</li>
-										<li>Apadrina un coach</li>
-									</ul>
-								</p>
-							</div>
-						</div>
-					</div>
-					
-				</div>
-			</section>
-
-			<section class="testimonial" id="testimonial" style="background: #56613f !important;">
-				<div class="container">
-					<div class="row  mt-md-0 mt-lg-4">
-						<div class="col-sm-6 text-white" data-aos="fade-up">
-							<p class="font-weight-bold mb-3">Graduados</p>
-							<h3 class="font-weight-medium">TESTIMONIOS DE NUESTROS   <br>GRADUADOS.</h3>
-							<ul class="flipster-custom-nav">
-								<li class="flipster-custom-nav-item">
-									<a href="javascript:;" class="flipster-custom-nav-link active" title="0"></a>
-								</li>
-								<li class="flipster-custom-nav-item">
-									<a href="javascript:;" class="flipster-custom-nav-link"  title="1"></a>
-								</li>
-								<li class="flipster-custom-nav-item">
-									<a href="javascript:;" class="flipster-custom-nav-link"  title="2"></a>
-								</li>
-								
-							</ul>
-						</div>
-
-					
-						<div class="col-sm-6" data-aos="fade-up">
-							<div id="testimonial-flipster">
-								<ul>
-									<li>
-										<div class="testimonial-item" style="padding: 30px 30px 30px 30px !important;">
-											<div class="embed-responsive embed-responsive-16by9">
-												<video src='video/testimonios/Gerardo (Testimonio).mp4' controls></video>
-											</div>
-										</div>
-									</li>
-									<li>
-										<div class="testimonial-item" style="padding: 30px 30px 30px 30px !important;">
-											<div class="embed-responsive embed-responsive-16by9">
-												<video src='video/testimonios/Mauricio (Testimonio).mp4' controls></video>
-											</div>
-										</div>
-									</li>
-									<li>
-										<div class="testimonial-item" style="padding: 30px 30px 30px 30px !important;">
-											<div class="embed-responsive embed-responsive-16by9">
-												<video src='video/testimonios/Video gabriela Hurtado.mp4' controls></video>
-											</div>
-										</div>
-									</li>
-									
-									
-								</ul>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
-
-			<section id="cedes" class="">
-				<div class="container" style="color:black !important;">
-					<div class="row">
-						
-						<div class="col-8">
-							<h4>Colombia: </h4>
-							<b>La Asociación Académica Latinoamericana de Estudios Sociales (ALES) </b>
-							<p class="text-justify">
-								Promover la colaboración internacional entre instituciones, docentes, investigadores y cualquier persona que quiera hacer un aporte al desarrollo y crecimiento del conocimiento humano, cuyo trabajo permita la creación y apropiación de nuevas vías de comprensión sobre los distintos temas que son parte del acervo humano y social.
-							</p>
-						</div>
-						<div class="col-4">
-							<img src="images/Colombia.png" alt="" class="img-fluid" width="120" height="120">
-						</div>
-
-						<!--
-						<div class="col-8">
-							<h4>Perú:</h4>
-							<b>Colegio de Coaches Profesionales</b>
-							<p class="text-justify">
-								Establecer una alianza estratégica basada en la cooperación y beneficio mutuo con el fin de compartir los recursos y complementar las ventajas conjuntamente con la finalidad de que se tienen a las personas calificadas a través de una educación de calidad, certificación y colegiado.
-							</p>
-						</div>
-						<div class="col-4">
-							<img src="images/peru2.png" alt="" class="img-fluid" width="120" height="120">
-						</div>
-						-->
-						<div class="col-8">
-							<h4>México, Colombia, Perú, Ecuador y Venezuela:</h4>
-							<b>Alianza del Pácifico</b> 
-							<p class="text-justify">
-								Tiene como objetivo fortalecer los lazos de integración educativa mediante acciones de cooperación, dirigidas al mejoramiento de las competencias y capacidades de la población de los países miembros y su acceso a una educación de calidad, como herramientas esenciales para el desarrollo del capital humano y para dar impulso a la productividad y la competitividad de los países de la Alianza del Pacífico.
-							</p>
-						</div>
-						<div class="col-4">
-							<img src="images/Alianza.JPG" alt="" class="img-fluid" width="120" height="120">
-						</div>
-						
-					</div>
-				</div>
-			</section>
-			
-			<section class="our-projects" id="projects" style="padding: 2px !important;">
-				<div class="container">
-					<div class="row mb-5">
-						<div class="col-sm-12">
-							<div class="d-sm-flex justify-content-between align-items-center mb-2">
-								<h3 class="font-weight-medium text-dark ">Congreso Internacional de Coaching por Competencias</h3>
-								<div><a href="https://forms.gle/HFE6j2Tdp6v442NV7" target="_blank" class="btn btn-success" style="background: #5a6543 !important; border-color: white !important;">Inscríbete</a></div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-sm-12 text-center">
-						<img src="images/Evento3.jpg" class="img-responsive" width="70%" height="auto">
-					</div>
-				</div>
-				<br><br>
-				<div class="row">
-					<div class="col-sm-12 text-center">
-						<iframe width="550" height="530" src="https://docs.google.com/forms/d/e/1FAIpQLSfbYsgPnj9X3BhN3J4_xqYVim6lJ7HPhT2jNmiNJwbuiDT5ag/viewform" title=""></iframe>
-					</div>
-				</div>
-
-
-
-				<br><br><br>
-				<h3 class="font-weight-medium text-dark text-center">Empresas, educación media superior y universidades con las que hemos colaborado:</h3>
-				<div id="demo" class="carousel slide" data-ride="carousel">
-					<!-- Indicators -->
-					<ul class="carousel-indicators">
-					  <li data-target="#demo" data-slide-to="0" class="active"></li>
-					  <li data-target="#demo" data-slide-to="1"></li>
-					  <li data-target="#demo" data-slide-to="2"></li>
-					</ul>
-					
-					<!-- The slideshow -->
-					<div class="carousel-inner text-center">
-					  <div class="carousel-item active">
-						<img src="images/colaboracion1.png" width="250" height="130">
-					  </div>
-					  <div class="carousel-item">
-						<img src="images/colaboracion2.jpg" width="250" height="130">
-					  </div>
-					  <div class="carousel-item">
-						<img src="images/colaboracion3.jpg" width="130" height="130">
-					  </div>
-					  <div class="carousel-item">
-						<img src="images/colaboracion4.jpg" width="200" height="130">
-					  </div>
-					  <div class="carousel-item">
-						<img src="images/colaboracion5.jpg" width="250" height="130">
-					  </div>
-					  <div class="carousel-item">
-						<img src="images/colaboracion6.jpg" width="250" height="130">
-					  </div>
-					</div>
-					<style>
-						.carousel-inner .carousel-item {
-							transition: -webkit-transform 6s ease;
-							transition: transform 6s ease;
-							transition: transform 6s ease, -webkit-transform 6s ease;
-							transition-duration: 6s;
-							}
-						
-					</style>
-					<!-- Left and right controls -->
-					<a class="carousel-control-prev" href="#demo" data-slide="prev">
-					  <span class="carousel-control-prev-icon"></span>
-					</a>
-					<a class="carousel-control-next" href="#demo" data-slide="next">
-					  <span class="carousel-control-next-icon"></span>
-					</a>
-				</div>
-
-				<br><br><br>
-				<!--
-				<div class="text-center">
-					<div class="owl-carousel-projects owl-carousel owl-theme">
-						<div class="item">
-							<img src="images/colaboracion1.png" width="250" height="120">
-						</div>
-						<div class="item">
-							<img src="images/colaboracion2.jpg" width="380" height="120">
-						</div>
-						<div class="item">
-							<img src="images/colaboracion3.jpg" style="width: 120px !important;" height="120">
-						</div>
-						<div class="item">
-							<img src="images/colaboracion4.jpg" width="250" height="120">
-						</div>
-						<div class="item">
-							<img src="images/colaboracion5.jpg" width="250" height="120">
-						</div>
-						<div class="item">
-							<img src="images/colaboracion6.jpg" width="250" height="120">
-						</div>
-					</div>
-				</div>
-				-->
-				<!--
-				<div class="container">
-					<div class="row pt-5 mt-5 pb-5 mb-5">
-						<div class="col-sm-3">
-							<div class="d-flex py-3 my-3 my-lg-0 justify-content-center" data-aos="fade-down">
-								<img src="images/satisfied-client.svg" alt="satisfied-client" class="mr-3">
-								<div>
-									<h4 class="font-weight-bold text-dark mb-0"><span class="scVal">100</span>%</h4>
-									<h5 class="text-dark mb-0">Clientes Satisfechos</h5>
-								</div>
-							</div>
-						</div>
-						<div class="col-sm-3">
-							<div class="d-flex py-3 my-3 my-lg-0 justify-content-center" data-aos="fade-up">
-								<img src="images/finished-project.svg" alt="satisfied-client" class="mr-3">
-								<div>
-									<h4 class="font-weight-bold text-dark mb-0"><span class="fpVal">36</span></h4>
-									<h5 class="text-dark mb-0">Proyectos Terminados</h5>
-								</div>
-							</div>
-						</div>
-						<div class="col-sm-3">
-							<div class="d-flex py-3 my-3 my-lg-0 justify-content-center" data-aos="fade-down">
-								<img src="images/team-members.svg" alt="Team Members" class="mr-3">
-								<div>
-									<h4 class="font-weight-bold text-dark mb-0"><span class="tMVal">23</span></h4>
-									<h5 class="text-dark mb-0">Miembros del Equipo</h5>
-								</div>
-							</div>
-						</div>
-						<div class="col-sm-3">
-							<div class="d-flex py-3 my-3 my-lg-0 justify-content-center" data-aos="fade-up">
-								<img src="images/our-blog-posts.svg" alt="Our Blog Posts" class="mr-3">
-								<div>
-									<h4 class="font-weight-bold text-dark mb-0"><span class="bPVal">180</span></h4>
-									<h5 class="text-dark mb-0">Posts</h5>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				-->
-			</section>
-			
-			<section id="avalan" class=""  data-aos="fade-up" data-aos-offset="-400" style="margin-top: none !important;">
-				<div class="container">
-					<div class="row">
-						<div class="d-sm-flex justify-content-between align-items-center mb-2">
-							<h3 class="font-weight-medium text-dark ">Instituciones Gubernamentales que nos Avalan.</h3>
-						</div>
-						<div class="col-sm-12">
-							<div class="d-sm-flex justify-content-between align-items-center">
-								<img src="images/sep.png" class="img-responsive p-2 p-lg-0" width="300" height="120" data-aos="fade-down"  data-aos-offset="-400">
-								<img src="images/conocer.png" class="img-responsive p-2 p-lg-0" width="300" height="120" data-aos="fade-down"  data-aos-offset="-400">
-								<img src="images/Ins2.png" class="img-responsive p-2 p-lg-0" width="300" height="120" data-aos="fade-up"  data-aos-offset="-400">
-								<!---<img src="images/Ins3.png" class="img-responsive p-2 p-lg-0" width="150" height="150" data-aos="fade-down"  data-aos-offset="-400">-->
-							</div>
-						</div>
-					</div>
-				</div>
-				<br><br><br><br><br><br>
-			</section>
-			
-			<section class="pricing-list" id="plans" style="background: #56613f !important;">
-				<div class="container">
-					<div class="row" data-aos="fade-up" data-aos-offset="-500">
-						<div class="col-sm-12">
-							<div class="d-sm-flex justify-content-between align-items-center mb-2">
-								<div>
-									<h3 class="font-weight-medium text-white ">Modalidades</h3>
-									<!--<h5 class="text-dark ">Descripción</h5>-->
-								</div>
-								<!--
-								<div class="mb-5 mb-lg-0 mt-3 mt-lg-0">
-									<div class="d-flex align-items-center">
-										<p class="mr-2 font-weight-medium monthly text-active check-box-label">Mensual</p>
-										<label class="toggle-switch toggle-switch">
-										<input type="checkbox" checked  id="toggle-switch">
-										<span class="toggle-slider round"></span>
-										</label>
-										<p class="ml-2 font-weight-medium yearly check-box-label">Anual</p>
-									</div>
-								</div>
-								-->
-							</div>
-						</div>
-					</div>
-					<div class="row"  data-aos="fade-up" data-aos-offset="-300">
-						<div class="col-sm-6">
-							<div class="pricing-box">
-								<img src="images/birrete.png" width="150" height="120">
-								<h6 class="font-weight-medium title-text">Certificaciones:</h6>
-								<h6 class="text-amount mb-4 mt-2">Capacitamos y evaluamos las competencias del profesional del coaching con base a estándares.</h6>
-								<ul class="pricing-list text-justify">
-									<li>- Un estándar de competencias es un referente para evaluar y certificar la competencia profesional de las personas con un alto nivel de desempeño.</li>
-									<li>- La certificación oficial de la competencia se adquiere a través de una alineación, dónde podrás resolver tus dudas para que presentes con toda seguridad tu evaluación.</li>
-									<li>- Al ser emitida tu cédula de acreditación por la Secretaría de Educación Pública, tiene validez oficial no solo en nuestro país, sino en todo el mundo.</li>
-								</ul>
-								<img src="images/Certificado.JPG" width="150" height="150" class="img-fluid">
-								<br>
-								<a href="mailto:cecelinformes@gmail.com" class="btn btn-success" style="background: #5a6543 !important; border-color: white !important;">Adquirir</a>
-							</div>
-						</div>
-						<div class="col-sm-6" id="coachingDescripcion">
-							<div class="pricing-box selected">
-								<img src="images/coaching.png" width="150" height="120">
-								<h6 class="font-weight-medium title-text">Coaching</h6>
-								<ul class="pricing-list text-justify">
-									<li><b>Certificación: </b></li>
-									<li>Capacitación de alineación con fines de certificación. </li>
-									<li>Dirigido a todo profesional del coaching que deseen obtener una cédula de acreditación para tener validez oficial.</li>
-									<br>
-									<li><b>Procesos de Coaching: </b></li>
-									<li>Dirigido a toda persona que desee tener un balance en su vida a través de la ejecución del coaching.</li>
-									<br>
-									<li><b>Casa Club del Coach: </b></li>
-									<li>Dirigido a todo profesional del coaching que desee tener un espacio seguro a ser escuchado, eliminar el estrés de trabajo y salir renovado.</li>
-									<br>
-									<li><b>Apadrina un Coach: </b></li>
-									<li>Cómo empresa socialmente responsable, cada miembro certificado de nuestro centro, certificará a una persona que no cuente con los recursos económicos de Iberoamérica para formarlo y certificarlo como profesional del coaching. </li>
-								</ul>
-								<br>
-								<a href="#coachingDescripcion" class="btn btn-success" style="background: #5a6543 !important; border-color: white !important;">Adquirir</a>
-							</div>
-						</div>
-						<!--
-						<div class="col-sm-4">
-							<div class="pricing-box">
-								<img src="images/premium.svg" alt="starter">
-								<h6 class="font-weight-medium title-text">Paquete Premium</h6>
-								<h1 class="text-amount mb-4 mt-2">$14,000</h1>
-								<ul class="pricing-list">
-									<li>Landing Page, Servicios</li>
-									<li>Dominio</li>
-									<li>Hosting</li>
-									<li>Responsive</li>
-									<li>Web Dinámica</li>
-									<li>Sistema Administrativo (Gestión de Empleados, Punto de Venta, Kiosco).</li>
-									<li>Ecommerce</li>
-								</ul>
-								<a href="#" class="btn btn-outline-primary">Adquirir</a>
-							</div>
-						</div>
-						-->
-					</div>
-				</div>
-			</section>
-			<!--
-			<section class="contactus" id="contact">
-				<div class="container">
-					<div class="row mb-5 pb-5">
-						<div class="col-sm-5" data-aos="fade-up" data-aos-offset="-500">
-							<img src="images/contact.jpg" alt="contact" class="img-fluid">
-						</div>
-						<div class="col-sm-7" data-aos="fade-up" data-aos-offset="-500">
-							<h3 class="font-weight-medium text-dark mt-5 mt-lg-0">Contáctanos</h3>
-							<h5 class="text-dark mb-5">Descripción</h5>
-							<form>
-								<div class="row">
-									<div class="col-sm-6">
-										<div class="form-group">
-											<input type="text" class="form-control" id="name" placeholder="Nombre">
-										</div>
-									</div>
-									<div class="col-sm-6">
-										<div class="form-group">
-											<input type="email" class="form-control" id="mail" placeholder="Correo">
-										</div>
-									</div>
-									<div class="col-sm-6">
-										<div class="form-group">
-											<input type="text" class="form-control" id="phone" placeholder="Telefono">
-										</div>
-									</div>
-									<div class="col-sm-6">
-										<div class="form-group">
-											<input type="text" class="form-control" id="Especialidad" placeholder="Especialidad">
-										</div>
-									</div>
-									<div class="col-sm-6">
-										<div class="form-group">
-											<input type="text" class="form-control" id="interes" placeholder="Tema de Interes">
-										</div>
-									</div>
-									<div class="col-sm-12">
-										<div class="form-group">
-											<textarea name="message" id="message" class="form-control" placeholder="Deja tu comentario" rows="5"></textarea>
-										</div>
-									</div>
-									<div class="col-sm-12">
-										<a href="#" class="btn btn-secondary">Enviar</a>
-									</div>
-								</div>
-							</form>
-						</div>
-					</div>
-				</div>
-			</section>
-			-->
-		</div>
-
-		<!--BLOG-->
-		<!-- Page header with logo and tagline-->
-        <header id="Noticias" class="py-5 border-bottom mb-4">
-            <div class="container">
-				<div class="text-center">
-					<br><br>
-					<h1 class="font-weight-medium text-dark">Sitio Informativo</h1>
-                    <p>CERTIFICACIONES</p>
-				</div>
-        </header>
-        <!-- Page content-->
-        <div class="container">
-            <div class="row">
-                <!-- Blog entries-->
-                <div class="col-lg-8">
-                    <!-- 
-                    <div class="card mb-4">
-                        <a href="#!"><img class="card-img-top" src="https://dummyimage.com/850x350/dee2e6/6c757d.jpg" alt="..." /></a>
-                        <div class="card-body">
-                            <div class="small text-muted">January 1, 2022</div>
-                            <h2 class="card-title">Featured Post Title</h2>
-                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis aliquid atque, nulla? Quos cum ex quis soluta, a laboriosam. Dicta expedita corporis animi vero voluptate voluptatibus possimus, veniam magni quis!</p>
-                            <a class="btn btn-primary" href="#!">Read more →</a>
-                        </div>
+        <!-- Navbar & Hero Start -->
+        <div class="container-xxl position-relative p-0">
+            <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0" id="navbar">
+                <a href="index.php" class="navbar-brand p-0">
+                    <h1 class="m-0">CCL</h1>
+                    <!-- <img src="img/logo.png" alt="Logo"> -->
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                    <span class="fa fa-bars"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <div class="navbar-nav mx-auto py-0">
+                        <a href="#home" class="nav-item nav-link">Home</a>
+                        <a href="#about" class="nav-item nav-link">Acerca de</a>
+                        <a href="#servicios" class="nav-item nav-link">Servicios </a>
+                        <a href="#graduado" class="nav-item nav-link">Graduados </a>
+                        <a href="#contacto" class="nav-item nav-link">Contacto</a>
                     </div>
-					-->
-                	<div class="row">
-                        <div class="col-lg-12">
-                            <!-- Blog post-->
-							<div class="card mb-4">
-                                <!--<a href="#!"><img class="card-img-top" src="https://dummyimage.com/700x350/dee2e6/6c757d.jpg" alt="..." /></a>-->
-                                <div class="card-body">
-                                    <h5 class="card-title">
-										EC1261 Coaching de Finanzas Personales
-									</h5>
-                                    <a class="btn btn-success" style="background: #5a6543 !important" href="#!">Descargar →</a>
-                                </div>
-                            </div>
-							<div class="card mb-4">
-                                <!--<a href="#!"><img class="card-img-top" src="https://dummyimage.com/700x350/dee2e6/6c757d.jpg" alt="..." /></a>-->
-                                <div class="card-body">
-                                    <h5 class="card-title">EC1186 Coaching para el cambio de hábitos</h5>
-                                    <a class="btn btn-success" style="background: #5a6543 !important" href="#!">Descargar →</a>
-                                </div>
-                            </div>
-							<div class="card mb-4">
-                                <!--<a href="#!"><img class="card-img-top" src="https://dummyimage.com/700x350/dee2e6/6c757d.jpg" alt="..." /></a>-->
-                                <div class="card-body">
-                                    <h5 class="card-title">EC0724 Coaching para la ejecución</h5>
-                                    <a class="btn btn-success" style="background: #5a6543 !important" href="#!">Descargar →</a>
-                                </div>
-                            </div>
-							<div class="card mb-4">
-                                <!--<a href="#!"><img class="card-img-top" src="https://dummyimage.com/700x350/dee2e6/6c757d.jpg" alt="..." /></a>-->
-                                <div class="card-body">
-                                    <h5 class="card-title">EC0234 Facilitación de sesiones de Coaching transformacional</h5>
-                                    <a class="btn btn-success" style="background: #5a6543 !important" href="#!">Descargar →</a>
-                                </div>
-                            </div>
-							<div class="card mb-4">
-                                <!--<a href="#!"><img class="card-img-top" src="https://dummyimage.com/700x350/dee2e6/6c757d.jpg" alt="..." /></a>-->
-                                <div class="card-body">
-                                    <h5 class="card-title">EC0204 Ejecución de Sesiones de Coaching</h5>
-                                    <a class="btn btn-success" style="background: #5a6543 !important" href="#!">Descargar →</a>
-                                </div>
-                            </div>
-							<div class="card mb-4">
-                                <!--<a href="#!"><img class="card-img-top" src="https://dummyimage.com/700x350/dee2e6/6c757d.jpg" alt="..." /></a>-->
-                                <div class="card-body">
-                                    <h5 class="card-title">Coaching para el bienestar integral e inteligencia emocional</h5>
-                                    <a class="btn btn-success" style="background: #5a6543 !important" href="#!">Descargar →</a>
-                                </div>
-                            </div>
-							<div class="card mb-4">
-                                <!--<a href="#!"><img class="card-img-top" src="https://dummyimage.com/700x350/dee2e6/6c757d.jpg" alt="..." /></a>-->
-                                <div class="card-body">
-                                    <h5 class="card-title">Coaching hacia la conciencia de un estilo de vida saludable</h5>
-                                    <a class="btn btn-success" style="background: #5a6543 !important" href="#!">Descargar →</a>
-                                </div>
-                            </div>
-							<div class="card mb-4">
-                                <!--<a href="#!"><img class="card-img-top" src="https://dummyimage.com/700x350/dee2e6/6c757d.jpg" alt="..." /></a>-->
-                                <div class="card-body">
-                                    <h5 class="card-title">Coaching Inteligencia Espiritual: Un enfoque para despertar la conciencia</h5>
-                                    <a class="btn btn-success" style="background: #5a6543 !important" href="#!">Descargar →</a>
-                                </div>
-                            </div>
-						</div>
-						<div class="col-lg-12">
-                            <!-- Blog post-->
-                            <div class="card mb-4">
-                                <!--<a href="#!"><img class="card-img-top" src="https://dummyimage.com/700x350/dee2e6/6c757d.jpg" alt="..." /></a>-->
-                                <div class="card-body">
-                                    <h5 class="card-title">Coaching y las finanzas personales: un binomio necesario</h5>
-                                    <a class="btn btn-success" style="background: #5a6543 !important" href="#!">Descargar →</a>
-                                </div>
-                            </div>
-                        	<!-- Blog post-->
-                            <div class="card mb-4">
-                                <!--<a href="#!"><img class="card-img-top" src="https://dummyimage.com/700x350/dee2e6/6c757d.jpg" alt="..." /></a>-->
-                                <div class="card-body">
-                                    <h5 class="card-title">Coaching para el desempeño de equipos</h5>
-                                    <a class="btn btn-success" style="background: #5a6543 !important" href="#!">Descargar →</a>
-                                </div>
-                            </div>
-						    <div class="card mb-4">
-                                <div class="card-body">
-                                    <h5 class="card-title">Coaching educativo: El despertar de tu vocación</h5>
-                                    <a class="btn btn-success" style="background: #5a6543 !important" href="#!">Descargar →</a>
-                                </div>
-                            </div>
-							<div class="card mb-4">
-                                <div class="card-body">
-                                    <h5 class="card-title">Coaching en el Liderazgo</h5>
-                                    <a class="btn btn-success" style="background: #5a6543 !important" href="#!">Descargar →</a>
-                                </div>
-                            </div>
-							<div class="card mb-4">
-                                <div class="card-body">
-                                    <h5 class="card-title">Coaching Inteligencia espiritual: Un enfoque para despertar la conciencia</h5>
-                                    <a class="btn btn-success" style="background: #5a6543 !important" href="#!">Descargar →</a>
-                                </div>
-                            </div>
-							<div class="card mb-4">
-                                <div class="card-body">
-                                    <h5 class="card-title">Coaching para el desempeño de equipos</h5>
-                                    <a class="btn btn-success" style="background: #5a6543 !important" href="#!">Descargar →</a>
-                                </div>
-                            </div>
-						</div>
-                    </div>
+                    <?php
+                        /*if(!isset($_SESSION['correo'])){
+                            echo'<a href="login.php" class="btn rounded-pill py-2 px-4 ms-3 d-none d-lg-block">Iniciar Sesión</a>';
+                        }else{
+                            echo '<div class="dropdown">
+                            <button class="btn rounded-pill py-2 px-4 ms-3 d-none d-lg-block" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            '.$_SESSION['nombre'].'
+                            </button>
+                            <ul class="dropdown-menu">
+                            <li><button class="dropdown-item" type="button">';
+                              if($_SESSION['tipo']==1)echo '<a class="dropdown-item" href="menuA.php">Menú</a>';
+                              if($_SESSION['tipo']==2)echo '<a class="dropdown-item" href="menuU.php">Menú</a>';
+                              echo '</button></li>
+                              <li><button class="dropdown-item" type="button"><a class="dropdown-item" href="logout.php">Cerrar Sesión</a></button></li>
+                            </ul>
+                          </div>';
+                        } */  
+                     ?>
                 </div>
-                <!-- Side widgets-->
-                <div class="col-lg-4">
-                    <!-- Search widget-->
-                    <div class="card mb-4">
-                        <div class="card-header">Noticias</div>
-                        <div class="card-body">
-                            <div class="input-group">
-                                <button class="btn btn-primary" style="background: #5a6543 !important" id="button-search" type="button">Recibir Noticias</button>
-                            </div>
+            </nav>
+
+            <div class="container-xxl bg-primary hero-header" id="home">
+                <div class="container px-lg-5">
+                    <div class="row g-5 align-items-end">
+                        <div class="col-lg-6 text-center text-lg-start">
+                            <h1 class="text-white mb-4 animated slideInDown">EL MEJOR ORGANISMO CERTIFICADOR DE MÉXICO </h1>
+                            <p class="text-white pb-3 animated slideInDown">¡Obtén tu certificación y abre las puertas a nuevas oportunidades! Bienvenido al centro certificador líder que impulsa tu futuro profesional</p>
+                            <a href="#about" class="btn btn-secondary py-sm-3 px-sm-5 rounded-pill me-3 animated slideInLeft">Conócenos </a>
+                            <a href="#contacto" class="btn btn-light py-sm-3 px-sm-5 rounded-pill animated slideInRight">¡Contáctanos!</a>
+                        </div>
+                        <div class="col-lg-6 text-center text-lg-start">
+                            <img class="img-fluid animated zoomIn" src="img/hero2.png" alt="Imagen promocional">
                         </div>
                     </div>
-                    <!-- Categories widget-->
-                    <div class="card mb-4">
-                        <div class="card-header">Categorías</div>
-                        <div class="card-body">
-                            <div class="row">
-                                <div class="col-sm-6">
-                                    <ul class="list-unstyled mb-0">
-                                        <li><a href="#!">Especializaciones</a></li>
-                                        <li><a href="#!">Certificaciones</a></li>
-                                        <li><a href="#!"> Próximos Eventos</a></li>
-                                    </ul>
-                                </div>
-                                <div class="col-sm-6">
-                                    <ul class="list-unstyled mb-0">
-                                        <li><a href="#!">Coaching</a></li>
-                                        <li><a href="#!">Graduados</a></li>
-                                        <li><a href="#!">Nuevos Servicios</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- 
-                    <div class="card mb-4">
-                        <div class="card-header">Side Widget</div>
-                        <div class="card-body">You can put anything you want inside of these side widgets. They are easy to use, and feature the Bootstrap 5 card component!</div>
-                    </div>
-					-->
                 </div>
             </div>
         </div>
-		
-		<section class="" id="Cedes2">
-			<div class="container">
-				<h3 class="text-center">Centros educativos de Centro Certificador de Líderes</h3>
-				<div class="row">
-					<div class="col-12 col-lg-3">
-						<div class="card text-center">
-							<a href="#!"><img class="card-img-top" src="images/colombia2.png" class="img-fluid" style="width:80px !important; height:120 px !important;" alt="..." /></a>
-							<div class="card-body">
-								<h5 class="card-title">Colombia</h5>
-								<p>Centro Certificador de Líderes Filial Colombia</p>
-							</div>
-						</div>
-					</div>
-					<div class="col-12 col-lg-3">
-						<div class="card text-center">
-							<a href="#!"><img class="card-img-top" src="images/peru2.png" class="img-fluid" style="width:80px !important; height:120 px !important;" alt="..." /></a>
-							<div class="card-body">
-								<h5 class="card-title">Perú</h5>
-								<p>Centro Certificador de Líderes Filial Perú</p>
-							</div>
-						</div>
-					</div>
-					<div class="col-12 col-lg-3">
-						<div class="card text-center">
-							<a href="#!"><img class="card-img-top" src="images/venezuela2.png" class="img-fluid" style="width:80px !important; height:120 px !important;" alt="..." /></a>
-							<div class="card-body">
-								<h5 class="card-title">Venezuela</h5>
-								<p>Centro Certificador de Líderes Filial Venezuela</p>
-							</div>
-						</div>
-					</div>
-					<div class="col-12 col-lg-3">
-						<div class="card text-center">
-							<a href="#!"><img class="card-img-top" src="images/ecuador2.png" class="img-fluid" style="width:80px !important; height:120 px !important;" alt="..." /></a>
-							<div class="card-body">
-								<h5 class="card-title">Ecuador</h5>
-								<p>Centro Certificador de Líderes Filial Ecuador</p>
-							</div>
-						</div>
-					</div>
-										
-				</div>
-			</div>
-		</section>
-		<br><br><br><br>
+        <!-- Navbar & Hero End -->
 
-		<footer class="footer" style="background: #542e6d !important;">
-			<div class="footer-top">
-				<div class="container">
-					<div class="row">
-						<div class="col-sm-6">
-							<address>
-								<p>Av. Sierra Leona 360, Villantigua</p>
-								<p class="mb-4">78214 San Luis, S.L.P.</p>
-								<div class="d-flex align-items-center">
-									<p class="mr-4 mb-0">+52 444 491 2462</p>
-									<a href="mailto:ceceldirecc@gmail.com" class="footer-link">ceceldirecc@gmail.com</a>
-								</div>
-							</address>
-							<div class="social-icons">
-								<h6 class="footer-title font-weight-bold">
-									Redes Sociales
-								</h6>
-								<div class="d-flex">
-									<a target="_blank" href="https://www.facebook.com/Ceceldirecc"><i class="mdi mdi-facebook-box"></i></a>
-									<a target="_blank" href="https://youtube.com/channel/UCt1KmvXiLQyjxY2jU2Wuu_Q"><i class="mdi mdi-youtube"></i></a>
-									<a target="_blank" href="https://instagram.com/centro.lideres?utm_medium=copy_link"><i class="mdi mdi-instagram"></i></a>
-									<a target="_blank" href="https://vm.tiktok.com/ZM8QCNWXT/"><i class="fab fa-tiktok"></i></a>
-								</div>
-							</div>
-						</div>
-						<div class="col-sm-6">
-							<!--
-							<div class="row">
-							<div class="col-sm-4">
-									<h6 class="footer-title">Social Share</h6>
-									<ul class="list-footer">
-										<li><a href="#" class="footer-link">Home</a></li>
-										<li><a href="#" class="footer-link">About</a></li>
-										<li><a href="#" class="footer-link">Services</a></li>
-										<li><a href="#" class="footer-link">Portfolio</a></li>
-										<li><a href="#" class="footer-link">Contact</a></li>
-									</ul>
-								</div>
-								<div class="col-sm-4">
-									<h6 class="footer-title">Product</h6>
-									<ul class="list-footer">
-										<li><a href="#" class="footer-link">Digital Marketing</a></li>
-										<li><a href="#" class="footer-link">Web Development</a></li>
-										<li><a href="#" class="footer-link">App Development</a></li>
-										<li><a href="#" class="footer-link">Design</a></li>
-									</ul>
-								</div>
-								<div class="col-sm-4">
-									<h6 class="footer-title">Company</h6>
-									<ul class="list-footer">
-										<li><a href="#" class="footer-link">Partners</a></li>
-										<li><a href="#" class="footer-link">Investors</a></li>
-										<li><a href="#" class="footer-link">Partners</a></li>
-										<li><a href="#" class="footer-link">FAQ</a></li>
-									</ul>
-								</div>
-							</div>
-							-->
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="footer-bottom">
-				<div class="container">
-					<div class="d-flex justify-content-between align-items-center">
-						<div class="d-flex align-items-center">
-							<img src="images/Logo.png" alt="logo" class="mr-3">
-							<p class="mb-0 text-small pt-1">© 2022 Todos los derechos reservados</p>
-						</div>
-						<div>
-							<div class="d-flex">
-								<!--
-								<a href="#" class="text-small text-white mx-2 footer-link">Privacy Policy </a>          
-								<a href="#" class="text-small text-white mx-2 footer-link">Customer Support </a>
-								<a href="#" class="text-small text-white mx-2 footer-link">Careers </a>
-								-->
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</footer>
-		<script src="vendors/base/vendor.bundle.base.js"></script>
-		<script src="vendors/owl.carousel/js/owl.carousel.js"></script>
-		<script src="vendors/aos/js/aos.js"></script>
-		<script src="vendors/jquery-flipster/js/jquery.flipster.min.js"></script>
-		<script src="js/template.js"></script>
-		<script>
-			$( document ).ready(function() {
-				$('.carousel').carousel({
-				interval: 1000
-				});
-			});
-		</script> 
-		<script>
-			$(window).on("scroll", function() {
-            	if($(window).scrollTop()) {
-					$('.navbar').css("background","#542e6d");
-				}else {
-					$('.navbar').css("background-color","transparent");
-				}
-			})
-		</script>
-	</body>
+        <!-- 
+        <div class="container-xxl py-5">
+            <div class="container py-5 px-lg-5">
+                <div class="row g-4">
+                    <div class="col-lg-4 wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="feature-item bg-light rounded text-center p-4">
+                            <i class="fa fa-3x fa-mail-bulk text-primary mb-4"></i>
+                            <h5 class="mb-3">Digital Marketing</h5>
+                            <p class="m-0">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet lorem.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 wow fadeInUp" data-wow-delay="0.3s">
+                        <div class="feature-item bg-light rounded text-center p-4">
+                            <i class="fa fa-3x fa-search text-primary mb-4"></i>
+                            <h5 class="mb-3">SEO & Backlinks</h5>
+                            <p class="m-0">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet lorem.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 wow fadeInUp" data-wow-delay="0.5s">
+                        <div class="feature-item bg-light rounded text-center p-4">
+                            <i class="fa fa-3x fa-laptop-code text-primary mb-4"></i>
+                            <h5 class="mb-3">Design & Development</h5>
+                            <p class="m-0">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet lorem.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+         -->
+
+
+        <!-- Acerca de Start -->
+        <div class="container-xxl py-5" id="about" >
+            <div class="container py-5 px-lg-5">
+                <div class="row g-5 align-items-center">
+                    <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+                        <p class="section-title text-secondary">Acerca de Nosotros<span></span></p>
+                        <h1 class="mb-5">¿QUIÉNES SOMOS?</h1>
+                        <p class="mb-4">Somos un centro de evaluación y certificación de coaching, con una metodología avalada por la Secretaria de Educación Pública (SEP), a través del Consejo Nacional de Normalización y Certificación de Competencias Laborales (CONOCER); que ofrece al empresario, trabajadores, docentes, estudiantes y servidores públicos un alto nivel de competencias para trabajar en el logro de sus objetivos.</p>
+                        <div class="accordion" id="accordionExample">
+                            <div class="accordion-item">
+                              <h2 class="accordion-header">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                  Misión 
+                                </button>
+                              </h2>
+                              <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    Brindamos acompañamiento en el crecimiento, alineación y equilibrio en todas las areas de las personas bajo una metodología de reconocimiento mundial. Contribuimos al desarrollo personal y profesional en acciones de mejoras a través del coaching, logrando despertar todas las cualidades dormidas y encaminarlas al logro de objetivos.
+                                </div>
+                              </div>
+                            </div>
+                            <div class="accordion-item">
+                              <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    Visión
+                                </button>
+                              </h2>
+                              <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    Ser un centro de evaluación y certificación de coaching de talla mundial, que logre contribuir en el ser humano un alto nivel de excelencia, con altos estándares de calidad, y profesionalismo.                                </div>
+                              </div>
+                            </div>
+                            <div class="accordion-item">
+                              <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                  Valores Corporativos
+                                </button>
+                              </h2>
+                              <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    El centro certificador cuenta con los siguientes valores corporativos donde el cliente es lo más importante.<br>
+                                    <ul>
+                                        <li>Valores éticos, el mundo está urgido de retomar e incorporar los valores en la vida del ser humano.</li>
+                                        <li>Confidencialidad, el secreto profesional es lo más importante para nosotros.</li>
+                                        <li>Integridad y coherencia; aplicamos lo que decimos.</li>
+                                        <li>Honestidad, el cliente necesita de un acompañamiento responsable, con profesionales que puedan garantizar un excelente trabajo.</li>
+                                        <li>Orientación y acompañamiento al logro de objetivos.</li>
+                                        <li>Calidad en el servicio, nos esforzamos por brindarle a nuestros clientes la mejor calidad, con los mejores profesionales.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+                        <!-- About End <div class="col-lg-5">
+                            <img class="img-fluid wow zoomIn" data-wow-delay="0.5s" src="img/about.png">
+                        </div>-->
+                    </div>
+                    <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+                        <img class="img-fluid wow zoomIn" data-wow-delay="0.5s" src="img/LogoCCL.png">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- About End -->
+
+        <!-- Estadisticas Start -->
+        <div class="container-xxl bg-primary fact py-5 wow fadeInUp" data-wow-delay="0.1s">
+            <div class="container py-5 px-lg-5">
+                <div class="row g-4">
+                    <div class="col-md-6 col-lg-3 text-center wow fadeIn" data-wow-delay="0.1s">
+                        <i class="fa fa-certificate fa-3x text-secondary mb-3"></i>
+                        <h1 class="text-white mb-2" data-toggle="counter-up">17</h1>
+                        <p class="text-white mb-0">Años de experiencia</p>
+                    </div>
+                    <div class="col-md-6 col-lg-3 text-center wow fadeIn" data-wow-delay="0.3s">
+                        <i class="fa fa-users-cog fa-3x text-secondary mb-3"></i>
+                        <h1 class="text-white mb-2" data-toggle="counter-up">15</h1>
+                        <p class="text-white mb-0">Empresas con las que <br>hemos colaborado </p>
+                    </div>
+                    <div class="col-md-6 col-lg-3 text-center wow fadeIn" data-wow-delay="0.5s">
+                        <i class="fa fa-users fa-3x text-secondary mb-3"></i>
+                        <h1 class="text-white mb-2" data-toggle="counter-up">50</h1>
+                        <p class="text-white mb-0">Clientes satisfechos</p>
+                    </div>
+                    <div class="col-md-6 col-lg-3 text-center wow fadeIn" data-wow-delay="0.7s">
+                        <i class="fa fa-check fa-3x text-secondary mb-3"></i>
+                        <h1 class="text-white mb-2" data-toggle="counter-up">10 </h1>
+                        <p class="text-white mb-0">Certificaciones </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Estadisticas End -->
+
+        <!-- servicios Start -->
+        <div class="container-xxl py-5" id="servicios">
+            <div class="container py-5 px-lg-5">
+                <div class="wow fadeInUp" data-wow-delay="0.1s">
+                    <p class="section-title text-secondary justify-content-center"><span></span><span></span></p>
+                    <h1 class="text-center mb-5">Nuestros Servicios </h1>
+                </div>
+                <div class="row mt-n2 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="col-12 text-center">
+                        <ul class="list-inline mb-5" id="portfolio-flters">
+                            <li class="mx-2 active" data-filter="*">Todos</li>
+                            <li class="mx-2" data-filter=".first">Certificaciones</li>
+                            <li class="mx-2" data-filter=".second">Coaching</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="row g-4 portfolio-container">
+                    <div class="col-lg-4 col-md-6 portfolio-item first wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="rounded overflow-hidden">
+                            <div class="position-relative overflow-hidden">
+                                <img class="img-fluid w-100" src="img/eco724.jpg" alt="">
+                                <div class="portfolio-overlay">
+                                    <a class="btn btn-square btn-outline-light mx-1" href="https://conocer.gob.mx/contenido/publicaciones_dof/EC0724.pdf"><i class="fa fa-link"></i></a>
+                                </div>
+                            </div>
+                            <div class="bg-light p-4">
+                                <p class="text-primary fw-medium mb-2">Certificaciones</p>
+                                <h5 class="lh-base mb-0">EC0 724 Coaching para la ejecución</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-4 col-md-6 portfolio-item first wow fadeInUp" data-wow-delay="0.3s">
+                        <div class="rounded overflow-hidden">
+                            <div class="position-relative overflow-hidden">
+                                <img class="img-fluid w-100" src="img/ec12612.jpg" alt="" >
+                                <div class="portfolio-overlay">
+                                    <a class="btn btn-square btn-outline-light mx-1" href="https://www.conocer.gob.mx/contenido/publicaciones_dof/2020/EC1261.pdf"><i class="fa fa-link"></i></a>
+                                </div>
+                            </div>
+                            <div class="bg-light p-4">
+                                <p class="text-primary fw-medium mb-2">Certificaciones</p>
+                                <h5 class="lh-base mb-0">EC1261 Coaching de Finanzas Personales</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 portfolio-item second wow fadeInUp" data-wow-delay="0.5s">
+                        <div class="rounded overflow-hidden">
+                            <div class="position-relative overflow-hidden">
+                                <img class="img-fluid w-100" src="img/formacion.jpg" alt="">
+                                <div class="portfolio-overlay">
+                                    <a class="btn btn-square btn-outline-light mx-1" href="https://www.escuelacoaching.com/que-es-coaching-ser-coach/"><i class="fa fa-link"></i></a>
+                                </div>
+                            </div>
+                            <div class="bg-light p-4">
+                                <p class="text-primary fw-medium mb-2">Coaching</p>
+                                <h5 class="lh-base mb-0">Formación</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 portfolio-item second wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="rounded overflow-hidden">
+                            <div class="position-relative overflow-hidden">
+                                <img class="img-fluid w-100" src="img/capacitacion.png" alt="">
+                                <div class="portfolio-overlay">
+                                    <a class="btn btn-square btn-outline-light mx-1" href="https://www.escuelacoaching.com/que-es-coaching-ser-coach/"><i class="fa fa-link"></i></a>
+                                </div>
+                            </div>
+                            <div class="bg-light p-4">
+                                <p class="text-primary fw-medium mb-2">Coaching</p>
+                                <h5 class="lh-base mb-0">Capacitación</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 portfolio-item second wow fadeInUp" data-wow-delay="0.3s">
+                        <div class="rounded overflow-hidden">
+                            <div class="position-relative overflow-hidden">
+                                <img class="img-fluid w-100" src="img/certificacion.jpg" alt="">
+                                <div class="portfolio-overlay">
+                                    <a class="btn btn-square btn-outline-light mx-1" href="https://conocer.gob.mx/contenido/publicaciones_dof/EC0724.pdf"><i class="fa fa-link"></i></a>
+                                </div>
+                            </div>
+                            <div class="bg-light p-4">
+                                <p class="text-primary fw-medium mb-2">Coaching</p>
+                                <h5 class="lh-base mb-0">Certificación</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 portfolio-item second wow fadeInUp" data-wow-delay="0.5s">
+                        <div class="rounded overflow-hidden">
+                            <div class="position-relative overflow-hidden">
+                                <img class="img-fluid w-100" src="img/sesiones.jpg" alt="">
+                                <div class="portfolio-overlay">
+                                    <a class="btn btn-square btn-outline-light mx-1" href="https://www.esneca.com/blog/sesion-coaching-como-es/"><i class="fa fa-link"></i></a>
+                                </div>
+                            </div>
+                            <div class="bg-light p-4">
+                                <p class="text-primary fw-medium mb-2">Coaching</p>
+                                <h5 class="lh-base mb-0">Sesiones de Coachinng</a>                           
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 portfolio-item second wow fadeInUp" data-wow-delay="0.5s">
+                        <div class="rounded overflow-hidden">
+                            <div class="position-relative overflow-hidden">
+                                <img class="img-fluid w-100" src="img/cEmpresarial.jpg" alt="">
+                                <div class="portfolio-overlay">
+                                    <a class="btn btn-square btn-outline-light mx-1" href="https://preply.com/es/blog/b2b-que-es-coaching-empresarial/"><i class="fa fa-link"></i></a>
+                                </div>
+                            </div>
+                            <div class="bg-light p-4">
+                                <p class="text-primary fw-medium mb-2">Coaching</p>
+                                <h5 class="lh-base mb-0">Coaching Empresarial</a>                           
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 portfolio-item wow fadeInUp" data-wow-delay="0.5s">
+                        <div class="rounded overflow-hidden">
+                            <div class="position-relative overflow-hidden">
+                                <img class="img-fluid w-100" src="img/conferencia.png" alt="">
+                                <div class="portfolio-overlay">
+                                    <a class="btn btn-square btn-outline-light mx-1" href="https://www.facebook.com/Ceceldirecc"><i class="fa fa-link"></i></a>
+                                </div>
+                            </div>
+                            <div class="bg-light p-4">
+                                <h5 class="lh-base mb-0">Conferencias</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 portfolio-item wow fadeInUp" data-wow-delay="0.5s">
+                        <div class="rounded overflow-hidden">
+                            <div class="position-relative overflow-hidden">
+                                <img class="img-fluid w-100" src="img/cHumano.jpg" alt="">
+                                <div class="portfolio-overlay">
+                                    <a class="btn btn-square btn-outline-light mx-1" href="https://www.edx.org/es/aprende/recursos-humanos-y-capital-humano"><i class="fa fa-link"></i></a>
+                                </div>
+                            </div>
+                            <div class="bg-light p-4">
+                                <h5 class="lh-base mb-0">Diseño de cursos de capital humano</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- servicios End -->
+        <span></span> 
+        <!-- Graduados Start -->
+        <div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s" id="graduado">
+            <div class="container py-5 px-lg-5">
+                <p class="section-title text-secondary justify-content-center"><span></span>Testimonios<span></span></p>
+                <h1 class="text-center mb-5">¡Qué dicen nuestros graduados!</h1>
+                <div class="owl-carousel testimonial-carousel">
+                    <div class="testimonial-item bg-light rounded my-4">
+                        <p class="fs-5"><i class="fa fa-quote-left fa-4x text-primary mt-n4 me-3"></i>Obtener la certificación de coaching para la ejecución ha sido transformador para mí. Las herramientas y técnicas que aprendí me han permitido mejorar significativamente mi productividad y enfoque. Ahora, no solo logro cumplir mis metas, sino que lo hago de manera más eficiente y con mayor confianza. Recomiendo esta certificación a cualquiera que quiera llevar su capacidad de ejecución al siguiente nivel.</p>
+                        <div class="d-flex align-items-center">
+                            <img class="img-fluid flex-shrink-0 rounded-circle" src="img/testimonial-1.jpg" style="width: 65px; height: 65px;">
+                            <div class="ps-4">
+                                <h5 class="mb-1">Gabriela Iliana Pérez </h5>
+                                <span>2020</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-item bg-light rounded my-4">
+                        <p class="fs-5"><i class="fa fa-quote-left fa-4x text-primary mt-n4 me-3"></i>Obtener la certificación de coaching para la ejecución ha sido clave para mi éxito profesional. Las estrategias aprendidas me han permitido gestionar mis proyectos de manera más eficiente y cumplir mis objetivos laborales con mayor eficacia. Esta certificación ha mejorado significativamente mi rendimiento en el trabajo y la forma en que abordo mis tareas diarias. ¡Altamente recomendada!</p>
+                        <div class="d-flex align-items-center">
+                            <img class="img-fluid flex-shrink-0 rounded-circle" src="img/testimonial-2.jpg" style="width: 65px; height: 65px;">
+                            <div class="ps-4">
+                                <h5 class="mb-1">Mauricio Mendoza</h5>
+                                <span>2020</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-item bg-light rounded my-4">
+                        <p class="fs-5"><i class="fa fa-quote-left fa-4x text-primary mt-n4 me-3"></i>Completar la certificación de coaching ha transformado mi manera de interactuar con mis clientes. He adquirido habilidades clave que me permiten entender mejor sus necesidades y ofrecerles un apoyo más efectivo y personalizado. Gracias a esta certificación, mis sesiones de coaching son ahora más impactantes y valiosas para mis clientes. ¡Altamente recomendada!</p>
+                        <div class="d-flex align-items-center">
+                            <img class="img-fluid flex-shrink-0 rounded-circle" src="img/testimonial-3.jpg" style="width: 65px; height: 65px;">
+                            <div class="ps-4">
+                                <h5 class="mb-1">Gerardo Sánchez</h5>
+                                <span>2021</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- graduados End -->
+
+        <!-- empresas Start -->
+        <div class="container-xxl py-5" id="empresas">
+            <div class="container py-5 px-lg-5">
+                <div class="wow fadeInUp" data-wow-delay="0.1s">
+                    <p class="section-title text-secondary justify-content-center"><span></span><span></span></p>
+                    <h1 class="text-center mb-5">Empresas e Instituciones con las que Hemos Colaborado </h1>
+                </div>
+                <div class="mx-auto p-2" style="width: 250px;">
+                    <div id="carrusel" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                          <div class="carousel-item active" data-bs-interval="2500">
+                            <img src="img/UDEM.png" class="d-block w-100" alt="udem">
+                          </div>
+                          <div class="carousel-item" data-bs-interval="2500">
+                            <img src="img/uicslp.png" class="d-block w-100" alt="UICSLP">
+                          </div>
+                          <div class="carousel-item">
+                            <img src="img/temazcalli.png" class="d-block w-100" alt="Temazcalli" data-bs-interval="2500">
+                          </div>
+                          <div class="carousel-item">
+                            <img src="img/cafeF.png" class="d-block w-100" alt="lafuente" data-bs-interval="2500">
+                          </div>
+                          <div class="carousel-item">
+                            <img src="img/uniM.png" class="d-block w-100" alt="Universidad de matehuala" data-bs-interval="2500">
+                          </div>
+                          <div class="carousel-item">
+                            <img src="img/bachilleres.png" class="d-block w-100" alt="Colegio de Bachilleres" data-bs-interval="2500">
+                          </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+                          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                          <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+                          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                          <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- empresas End -->
+
+        <!-- avalado Start -->
+        <div class="container-xxl bg-primary newsletter py-5 wow fadeInUp" data-wow-delay="0.1s">
+            <div class="container py-5 px-lg-5">
+                <div class="row justify-content-center">
+                    <div class="col-lg-7 text-center">
+                        <p class="section-title text-white justify-content-center"><span></span><span></span></p>
+                        <h1 class="text-center text-white mb-4">Instituciones Gubernamentales que nos Avalan </h1>
+                        <div class="row g-4">
+                            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">  
+                                <div class="service-item d-flex flex-column text-center rounded">
+                                    <img class="img-fluid w-100" src="img/conocer.png" alt="">
+                                    <a class="btn btn-square" href="https://conocer.gob.mx/liga_interes/el-consejo-nacional-de-normalizacion-y-certificacion-de-competencias-laborales/"><i class="fa fa-arrow-right"></i></a>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                                <div class="service-item d-flex flex-column text-center rounded">
+                                    <img class="img-fluid w-100" src="img/sep.png" alt="">
+                                    <a class="btn btn-square" href="https://www.gob.mx/sep"><i class="fa fa-arrow-right"></i></a>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                                <div class="service-item d-flex flex-column text-center rounded">
+                                    <img class="img-fluid w-100" src="img/STPS.png" alt="">
+                                    <a class="btn btn-square" href="https://www.gob.mx/stps"><i class="fa fa-arrow-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--avalado End -->
+
+        <!-- Team Start -->
+        <div class="container-xxl py-5">
+            <div class="container py-5 px-lg-5">
+                <div class="wow fadeInUp" data-wow-delay="0.1s">
+                    <p class="section-title text-secondary justify-content-center"><span></span><span></span></p>
+                    <h1 class="text-center mb-5">Nuestro Equipo</h1>
+                </div>
+                <div class="row g-4">
+                    <div class="mx-auto p-2" style="width: 390px;" data-wow-delay="0.1s">
+                        <div class="team-item bg-light rounded">
+                            <div class="text-center border-bottom p-4">
+                                <img class="img-fluid rounded-circle mb-4" src="img/grace.jpeg" alt="">
+                                <h5>Graciela Hurtado Pérez</h5>
+                                <span>Fundadora y Directora</span>
+                            </div>
+                            <div class="d-flex justify-content-center p-4">
+                                <a class="btn btn-square mx-1" href="https://www.facebook.com/Ceceldirecc"><i class="fab fa-facebook-f"></i></a>
+                                <a class="btn btn-square mx-1" href="https://www.instagram.com/centro.lideres/"><i class="fab fa-instagram"></i></a>
+                                <a class="btn btn-square mx-1" href="https://mx.linkedin.com/in/ctro-certificador-de-lideres-a9b33422b"><i class="fab fa-linkedin-in"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Team End -->
+        
+        <!--Contact Start-->
+        <div class="container py-5 px-lg-5" id="contacto" >
+            <div class="wow fadeInUp" data-wow-delay="0.1s">
+                <p class="section-title text-secondary justify-content-center"><span></span><span></span></p>
+                <h1 class="text-center mb-5">¡Contáctanos!</h1>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-7">
+                    <div class="wow fadeInUp" data-wow-delay="0.3s">
+                        <p class="text-center mb-4">Llena los datos y nos contactaeremos contigo lo más pronto posible<br>También puedes mandar mensaje a nuestro WhatsApp Business: Pendiente...</a>.</p>
+                        <form id="contactForm">
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <div class="form-floating">
+                                        <input type="text" class="form-control" id="name" placeholder="Tu Nombre" name="nombre" required>
+                                        <label for="name">Tu nombre</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-floating">
+                                        <input type="email" class="form-control" id="email" placeholder="Tu Correo" name="correo" required>
+                                        <label for="email">Tu correo</label>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-floating">
+                                        <input type="text" class="form-control" id="subject" placeholder="Asunto" name="asunto" required>
+                                        <label for="subject">Asunto</label>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-floating">
+                                        <textarea class="form-control" placeholder="Deja tu mensaje aquí" id="message" style="height: 150px" name="mensaje" required></textarea>
+                                        <label for="message">Mensaje</label>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <button class="btn btn-primary w-100 py-3" type="submit">Enviar Mensaje</button>
+                                </div>
+                                <div id="responseMessage"></div> <!-- Aquí se mostrará el mensaje de éxito o error -->
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--Contact End-->
+
+        <!-- Footer Start -->
+        <div class="container-fluid bg-primary text-light footer wow fadeIn" data-wow-delay="0.1s">
+            <div class="container py-5 px-lg-5">
+                <div class="row g-5">
+                    <div class="col-md-6 col-lg-3">
+                        <p class="section-title text-white h5 mb-4">Contacto <span></span></p>
+                        <p><i class="fa fa-map-marker-alt me-3"></i>Mariano Arista 811, De Tequisquiapan, 78250 San Luis Potosí, S.L.P.
+                        </p>
+                        <p><i class="fa fa-phone-alt me-3"></i>Pendiente...</p>
+                        <p><i class="fa fa-envelope me-3"></i>info@certificacionparalideres.com</p>
+                        <div class="d-flex pt-2">
+                            <a class="btn btn-outline-light btn-social" href="https://www.facebook.com/Ceceldirecc"><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-outline-light btn-social" href="https://www.instagram.com/centro.lideres/"><i class="fab fa-instagram"></i></a>
+                            <a class="btn btn-outline-light btn-social" href="https://www.youtube.com/@centrocertificadordelidere1300"><i class="fab fa-youtube"></i></a>
+                            <a class="btn btn-outline-light btn-social" href="https://mx.linkedin.com/in/ctro-certificador-de-lideres-a9b33422b"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <p class="section-title text-white h5 mb-4">Menú<span></span></p>
+                        <a href="index.php" class="btn btn-link">Home</a>
+                        <a href="#about" class="btn btn-link">Acerca de</a>
+                        <a href="#servicios" class="btn btn-link">Servicios</a>
+                        <a class="btn btn-link" href="#contacto">¡Contáctanos!</a>
+                    </div>
+                </div>
+            </div>
+            <div class="container px-lg-5">
+                <div class="copyright">
+                    <div class="row">
+                        <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                            &copy; <a class="border-bottom" href="#">Centro Certificador de Líderes </a>, All Right Reserved. 				
+                        </div>
+                        <div class="col-md-6 text-center text-md-end">
+                            <div class="footer-menu">
+                                <a href="index.php">Home</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer End -->
+
+        <!-- Back to Top -->
+        <a href="#home" class="btn btn-lg btn-secondary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+    </div>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/isotope/isotope.pkgd.min.js"></script>
+    <script src="lib/lightbox/js/lightbox.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+    <script>
+        document.getElementById("contactForm").addEventListener("submit", function(event) {
+            event.preventDefault(); // Evita la recarga de la página
+
+            let formData = new FormData(this);
+
+            fetch("send_email.php", {
+                method: "POST",
+                body: formData
+            })
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("responseMessage").innerHTML = `<div class="alert alert-success">${data}</div>`;
+                document.getElementById("contactForm").reset(); // Limpia el formulario después del envío
+            })
+            .catch(error => {
+                document.getElementById("responseMessage").innerHTML = `<div class="alert alert-danger">Error al enviar el mensaje.</div>`;
+            });
+        });
+        </script>
+
+</body>
+
 </html>
